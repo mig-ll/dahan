@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dahan</title>
+  <meta name="description" content="Short description  150 chars">
+  <meta name="keywords" content="Keywords for search engines">
+  <link rel="stylesheet" href="assets/js/notiflix/notiflix-3.2.8.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/marcas.css">
+  <link rel="stylesheet" href="assets/css/vision.css">
+
+  <!-- <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="icon" href="assets/img/favicon-32.png" type="image/png">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon-192.png">
+  <link rel="mask-icon" href="/favicon.svg" color="#990000" /> -->
+
+  <!-- <base href="https://dahan.com/index.html"> -->
+  <meta name="robots" content="index,nofollow">
+  <meta name="googlebot" content="index,nofollow">
+
+  <!-- Swiper styles -->
+  <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css">
+  <style>
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - LOADER */
+    #loader {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 200px;
+      color: #fff;
+      background-color: var(--cd1-k);
+      opacity: 1;
+      transition: opacity var(--timeTransition) ease-in;
+      z-index: 3000;
+    }
+
+    #loader.out,
+    #loader.hidden {
+      opacity: 0
+    }
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - / LOADER */
+  </style>
+</head>
+
+<body>
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - LOADER FORM -->
+  <div id="loader-page" class="loader-page hidden--loader"></div>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - HEADER -->
+  <header id="header">
+    <div class="container header-container">
+      <div>
+        <img id="main-logo" src="./assets/img/dahan_capital-logo.svg" alt="DAHAN CAPITAL Logo">
+      </div>
+      <!-- - - - - - - - - - - - - - - - - MAIN MENU -->
+      <nav class="menu">
+        <a href="#banner-anchor" class="btn-menu-txt active" id="m-inicio"
+        onclick="setMenu('banner')">INICIO</a>
+        <a href="#nosotros-anchor" class="btn-menu-txt" id="m-nosotros"
+        onclick="setMenu('nosotros')">NOSOTROS</a>
+        <a href="#sectores-anchor" class="btn-menu-txt" id="m-sectores"
+        onclick="setMenu('sectores')">SECTORES</a>
+        <a href="#soluciones-anchor" class="btn-menu-txt" id="m-soluciones"
+        onclick="setMenu('soluciones')">SOLUCIONES</a>
+        <a href="#vision-anchor" class="btn-menu-txt" id="m-vision"
+        onclick="setMenu('vision')">VISIÓN</a>
+        <a href="#presencia-anchor" class="btn-menu-txt" id="m-presencia"
+        onclick="setMenu('presencia')">PRESENCIA</a>
+        <a href="#contacto-anchor" class="btn-menu-txt" id="m-contacto"
+        onclick="setMenu('contacto')">CONTACTO</a>
+        <a id="lang" href="#">
+          <img src="./assets/img/lang/es-mx.svg" alt="Language">
+        </a>
+      </nav>
+
+      <!-- - - - - - - - - - - - - - - - / MAIN MENU -->
+    </div>
+    <button class="btn-close-dialog" onclick="openDialog('#dialogInfo')">&#9432;</button>
+  </header>
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - / HEADER -->
+
+  <main>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - BANNER -->
+    <div class="anchor" id="banner-anchor"></div>
+
+    <section id="banner">
+      <!-- <div class="container banner-container">
+        <img class="country" id="" src="./assets/img/banner/czech.jpg" alt="">
+        <img class="country" id="" src="./assets/img/banner/italy.jpg" alt="">
+        <img class="country" id="" src="./assets/img/banner/mexico.jpg" alt="">
+        <img class="country" id="" src="./assets/img/banner/usa.jpg" alt="">
+        <img class="country" id="" src="./assets/img/banner/israel.jpg" alt="">
+        <img class="country" id="" src="./assets/img/banner/uae.jpg" alt="">
+        <img class="building" id="" src="./assets/img/banner/banner-window.png" alt="">
+        <img class="ppl" id="" src="./assets/img/banner/ppl.png" alt="">
+        <h1>Global Real Estate & Capital Investment</h1> -->
+        <!-- <div class="mouse" onclick="document.getElementById('nosotros').scrollIntoView()"></div> -->
+        <!-- <a href="#nosotros-anchor" onclick="setMenu('nosotros')"><div class="mouse"></div></a>
+      </div> -->
+    </section>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / BANNER -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - SLOGAN -->
+    <section id="slogan">
+      <div class="container slogan-container">
+        <h2>Inversiones inteligentes, personas íntegras, resultados excepcionales.</h2>
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / SLOGAN -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - NOSOTROS -->
+    <div class="anchor" id="nosotros-anchor"></div>
+
+    <section id="nosotros">
+      <div class="container nosotros-container">
+        <h2 class="">NOSOTROS</h2>
+        <div class="nosotros-content">
+          <img class="nosotros-logo" src="./assets/img/dahan_capital-logo-w.svg" alt="Dahan Capital logo">
+          <div>
+            <p>En Dahan Capital, nos especializamos en inversiones innovadoras, despliegue de emprendimientos y
+              financiamiento directo para desarrollos de proyectos de alto impacto.</p>
+            <p>Nuestra experiencia abarca una amplia gama de sectores; desde la inversión en hoteles y bienes raíces
+              comerciales y residenciales; hasta proyectos innovadores en el mundo de la belleza, el entretenimiento y
+              la
+              gastronomía.</p>
+            <p>Con un enfoque preciso y una visión estratégica, impulsamos proyectos clave, ofreciendo soluciones
+              estratégicas y financieras; generando valor a largo plazo y resultados excepcionales para nuestros
+              inversionistas y socios.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / NOSOTROS -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - SECTORES -->
+    <div class="anchor" id="sectores-anchor"></div>
+
+    <section id="sectores">
+
+      <div class="container sectores-container">
+        <h2 class="">SECTORES</h2>
+        <h3 class="">En Dahan Capital, invertimos y desarrollamos proyectos en sectores clave que generan valor y
+          crecimiento sostenible.</h3>
+
+        <div class="sectores-content">
+          <div>
+            <p>Nuestra presencia abarca desde el desarrollo inmobiliario y la hotelería hasta la importación de
+              productos
+              estratégicos, el entretenimiento y la innovación empresarial.</p>
+            <p>Exploramos oportunidades en cada una de estas áreas para maximizar su potencial y garantizar un impacto
+              positivo en el mercado.</p>
+          </div>
+          <div class="sectores-images">
+            <div class="sectores-image image-1">
+              <div class="image-title">Desarrollo Residencial</div>
+            </div>
+            <div class="sectores-image image-2">
+              <div class="image-title">Desarrollo Comercial</div>
+            </div>
+            <div class="sectores-image image-3">
+              <div class="image-title">Hospitalidad</div>
+            </div>
+            <div class="sectores-image image-4">
+              <div class="image-title">Importación</div>
+            </div>
+            <div class="sectores-image image-5">
+              <div class="image-title">Entretenimiento</div>
+            </div>
+            <div class="sectores-image image-6">
+              <div class="image-title">Desarollo<br>de Startups</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / SECTORES -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - SOLUCIONES -->
+    <div class="anchor" id="soluciones-anchor"></div>
+
+    <section id="soluciones">
+      <div class="container soluciones-container">
+
+        <h2>SOLUCIONES</h2>
+
+        <div class="soluciones-content">
+
+          <div class="soluciones-txt-container" id="sol-lead">
+            <h4 class="soluciones-intro">Nuestro enfoque integral no solo asegura la creación de negocios exitosos, sino
+              que establece una base sólida para un crecimiento sostenido, con cada paso diseñado para generar valor
+              real y duradero. <strong>Valor que Dahan Capital da.</strong></h4>
+          </div>
+
+          <div class="soluciones-txt-container w-pic" id="sol-1">
+            <div class="sol-id">1</div>
+            <div class="sol-text">
+              <h4>Adquisiciones y Disposiciones</h4>
+              <div class="sol-description">
+                <p>Nuestra experiencia y entendimiento de las dina micas locales, así como de las leyes y procedimientos
+                  regulatorios, nos permiten identificar y asegurar que las oportunidades inmobiliarias de inversión
+                  maximicen
+                  su rentabilidad y seguridad.</p>
+                <p>Aprovechamos nuestro enfoque estratégico y nuestra red de contactos en todos los piases en los que
+                  operamos,
+                  para generar ingresos sostenibles, asegurando el éxito de cada proyecto mediante una gestio n experta
+                  y
+                  decisiones basadas en un ana lisis profundo de mercados.</p>
+              </div>
+            </div>
+            <div class="pic-container">
+              <img src="./assets/img/soluciones/soluciones-1.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="soluciones-txt-container w-pic" id="sol-2">
+            <div class="sol-id">2</div>
+            <div class="sol-text">
+              <h4>Desarrollo y Supervisión de Real Estate</h4>
+              <div class="sol-description">
+                <p>En Dahan Capital, trabajamos con reconocidas constructoras locales en diferentes países. Nos
+                  enfocamos
+                  en
+                  garantizar la conclusion y el éxito de cada proyecto inmobiliario.</p>
+                <p>Nuestra experiencia nos permite abordar y resolver complejas fórmulas legales y bancarias, asegurando
+                  que
+                  todas las fases del desarrollo sean cubiertas y resueltas a través de instrumentos legales
+                  estratégicos,
+                  forzando una ejecución exitosa de los proyectos en los que estamos envueltos; defendiendo así, los
+                  intereses
+                  de nuestros inversionistas y nuestros socios.</p>
+              </div>
+            </div>
+            <div class="pic-container">
+              <img src="./assets/img/soluciones/soluciones-1.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="soluciones-txt-container w-pic" id="sol-3">
+            <div class="sol-id">3</div>
+            <div class="sol-text">
+              <h4>Gestion de Real Estate</h4>
+              <div class="sol-description">
+                <p>En Dahan Capital, llevamos la gestión de propiedades a un nivel superior. No se trata solo de
+                  mantener
+                  los
+                  inmuebles, sino de transformar cada uno en un motor de eficiencia y rentabilidad.</p>
+                <p>Nuestro equipo, obsesionado con la perfección, se asegura de que cada propiedad no solo cumpla con
+                  las
+                  expectativas, sino que las supere, creando un valor constante y tangible.</p>
+                <p>Nos enfocamos en lo que importa: hacer que cada activo sea más que solo un espacio, convirtiéndolos
+                  en
+                  oportunidades.</p>
+              </div>
+            </div>
+            <div class="pic-container">
+              <img src="./assets/img/soluciones/soluciones-1.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="soluciones-txt-container w-pic" id="sol-4">
+            <div class="sol-id">4</div>
+            <div class="sol-text">
+              <h4>Startups y Gestión Integral Comercial</h4>
+              <div class="sol-description">
+                <p>En Dahan Capital, no solo abrimos negocios, los creamos desde sus bases con visión y estrategia. Cada
+                  proyecto pasa por un proceso que transforma ideas en realidades tangibles, asegurando rentabilidad y
+                  crecimiento. Desde la concepción estratégica hasta la ejecución operativa, cada fase está diseñada e
+                  implementada con conocimiento de los procesos locales para maximizar el éxito a largo plazo.
+                  <strong>Nuestro enfoque integral incluye:</strong>
+              </div>
+            </div>
+            </p>
+          </div>
+
+
+          <div class="soluciones-blk-container">
+            <h5>Definición Estratégica:</h5>
+            <p>Establecemos la visión, misión y objetivos del negocio, alineando todos los esfuerzos hacia el logro de
+              un
+              propósito claro.</p>
+
+            <h5>Desarrollo de Producto:</h5>
+            <p>Creamos experiencias y productos excepcionales, tanto digitales como físicos, que se conecten con las
+              necesidades y deseos del mercado.</p>
+
+            <h5>Planeación Financiera y Proyecciones:</h5>
+            <p>Modelamos el futuro del negocio con proyecciones precisas que guíen las decisiones financieras y
+              operativas.
+            </p>
+
+            <h5>Construcción de Infraestructura:</h5>
+            <p>Desarrollamos espacios físicos que no solo sean funcionales, sino que reflejen la identidad del negocio y
+              mejoren la experiencia del cliente final.</p>
+            <hr>
+            <h5>Lanzamiento y Apertura al Mercado:</h5>
+            <p>Introducimos nuestros negocio a los mercados con una estrategia que garantice su presencia, relevancia y
+              éxito inmediato.</p>
+
+            <h5>Selección y Desarrollo de Talento:</h5>
+            <p>Reclutamos individuos clave que encarnen los valores de nuestras empresas, acompañados de un proceso de
+              capacitación que establezca una cultura organizacional sólida.</p>
+
+            <h5>Establecimiento de Protocolos Operativos:</h5>
+            <p>Creamos experiencias y productos excepcionales, tanto digitales como físicos, que se conecten con las
+              necesidades y deseos del mercado.</p>
+
+            <h5>Optimización Continua de Procesos:</h5>
+            <p>Modelamos el futuro del negocio con proyecciones precisas que guíen las decisiones financieras y
+              operativas.
+            </p>
+
+            <h5>Maximización de Rentabilidad y Distribución de Utilidades:</h5>
+            <p>Modelamos el futuro del negocio con proyecciones precisas que guíen las decisiones financieras y
+              operativas.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / SOLUCIONES -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - VISION -->
+    <!-- <div class="anchor" id="vision-anchor"></div>
+    
+    <section id="vision">
+      
+      <div class="vision-cover"></div>
+      
+      <div class="container vision-container">
+        <h2>NUESTRA VISIÓN</h2>
+        
+        <div class="percent-65"></div>
+        
+        <div class="vision-content"> -->
+          <!-- <div class="txt-blk">
+            <h3>Dahan Capital es más que una firma de inversiones.</h3>
+            <p>Somos un motor de cambio y crecimiento que
+              impulsa la innovación y el progreso, respaldado por un equipo de expertos dedicados a lograr el éxito en
+              cada
+              uno de nuestros proyectos.</h3>
+            </div> -->
+            
+            <!-- <div class="txt-blk">
+              <h4>En Dahan Capital, somos líderes en la gestión de inversiones de capital directo y real estate, con un
+                enfoque
+                en generar resultados excepcionales mediante decisiones inteligentes y estratégicas.</h4>
+            <p>A lo largo de los años, hemos demostrado un sólido historial de éxito, invirtiendo en proyectos de alto
+              impacto en diversos países y contribuyendo al crecimiento y consolidación de negocios clave en cada
+              sector.
+            </p>
+          </div>
+          
+          <div class="txt-blk">
+            <p>Nuestra capacidad para identificar oportunidades únicas y gestionar fondos privados con visión
+              estratégica
+              nos ha permitido obtener resultados sobresalientes, respaldados por una ética de trabajo incansable y un
+              enfoque centrado en la excelencia.</p>
+              
+              <p>Estamos comprometidos con la creación de valor a largo plazo para nuestros inversores y socios,
+                fomentando
+                el
+                desarrollo de proyectos inmobiliarios y comerciales de vanguardia; así como financiando la construcción de
+                complejos residenciales y condominios que definen el futuro del real estate.</p>
+              </div>
+            </div>
+            
+            <img class="vision-logo" src="./assets/img/dahan_capital-logo-w.svg" alt="Dahan Capital logo">
+            
+          </div>
+        </section> -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - / VISION -->
+        
+<!-- - - - - - - - - - - - - - - - - - - - - TEST VISION -->
+
+<section id="wrapper-vision">
+    <img class="bg-image img-1" src="./assets/img/vision/vision-bg-line.jpg" alt="Vista de sketch">
+    <img class="bg-image img-2" src="./assets/img/vision/vision-bg-semi-color.jpg" alt="Vista de sketch semi coloreado">
+    <img class="bg-image img-3" src="./assets/img/vision/vision-bg-color.jpg" alt="Vista de sketch coloreado">
+    
+    <!-- Textos -->
+    <div class="vision-texts__container">
+      <div class="vision-text__container">
+        <div class="vision-text-1">
+          <p>
+            Dahan Capital es más que una firma de inversiones.
+          </p>
+          <p>
+            Somos un motor de cambio y crecimiento que impulsa la innovación y el progreso, respaldado por
+            un equipo de expertos
+            dedicados a lograr el éxito en cada uno de nuestros proyectos.
+          </p>
+        </div>
+      </div>
+      <div class="vision-text__container">
+        <div class="vision-text-2">
+          <p>
+            En Dahan Capital somos líderes en la gestión de inversiones de capital directo y real estate,
+            con un
+            enfoque en generar resultados excepcionales mediante decisiones inteligentes y estratégicas.
+          </p>
+          <p>
+            A lo largo de los años, hemos demostrado un sólido historial de éxito, invirtiendo en proyectos
+            de alto impacto en
+            diversos países y contribuyendo al crecimiento y consolidación de negocios clave en cada vision.
+          </p>
+        </div>
+      </div>
+      <div class="vision-text__container">
+        <div class="vision-text-3">
+          <p>
+            Nuestra capacidad para identificar oportunidades únicas y gestionar fondos privados con visión
+            estratégica nos ha
+            permitido obtener resultados sobresalientes, respaldados por una ética de trabajo incansable y
+            un enfoque centrado en
+            la excelencia.
+          </p>
+          <p>
+            Estamos comprometidos con la creación de valor a largo plazo para nuestros inversores y socios,
+            fomentando el
+            desarrollo de proyectos inmobiliarios y comerciales de vanguardia; así como financiando la
+            construcción de complejos
+            residenciales y condominios que definen el futuro del real estate.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Logo -->
+    <div class="vision-logo__container">
+      <img src="./assets/img/dahan_capital-logo-w.svg" alt="Dahan logo" class="vision-logo-dahan">
+    </div>
+    
+</section>
+
+<!-- - - - - - - - - - - - - - - - - - - - - / TEST VISION -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - PRESENCIA -->
+    <div class="anchor" id="presencia-anchor"></div>
+
+    <section id="presencia">
+      <div class="city calabria"></div>
+      <div class="city cancun"></div>
+      <div class="city dubai"></div>
+      <div class="city miami"></div>
+      <div class="city netanya"></div>
+      <div class="city playa"></div>
+      <div class="city prague"></div>
+      <div class="city telaviv"></div>
+      <div class="city tulum"></div>
+
+
+      <div class="container presencia-container">
+        <h2>PRESENCIA INTERNACIONAL</h2>
+        <p class="lead">Con operaciones en diferentes paises, aprovechamos nuestro conocimiento local y nuestra
+          experiencia global
+          para generar resultados excepcionales mediante decisiones inteligentes y estratégicas.</p>
+      </div>
+    </section>
+<!--     - - - - - - - - - - - - - - - - - - - - - - - - - / PRESENCIA-->
+
+<!--     - - - - - - - - - - - - - - - - - - - - - - - - - - CONTACTO-->
+    <div class="anchor" id="contacto-anchor"></div>
+
+    <section id="contacto">
+      <div class="container contacto-container">
+        <h2>CONTACTO</h2>
+
+        <div class="contact-content-container">
+          <div class="contact-content">
+            <div class="contact-msg">
+              <img class="contacto-logo" src="./assets/img/dahan_capital-logo.svg" alt="LOGO">
+              <p>Para cualquier propuesta o comentario, por favor, hágalo a través de este formulario.<br>
+                Nos pondremos en contacto con usted de inmediato.</p>
+              <div class="spacer"></div>
+            </div>
+            <form id="contactForm">
+              <div class="form-half">
+                <label>Nombre<span class="required">*</span></label>
+                <input type="text" class="" name="name" id="name" placeholder="" required>
+              </div>
+              <div class="form-half">
+                <label>Apellido<span class="required">*</span></label>
+                <input type="text" class="" name="lastname" id="lastname" placeholder="" required>
+              </div>
+              <div class="form-half">
+                <label>Compañía</label>
+                <input type="text" class="" name="company" id="company" placeholder="">
+              </div>
+              <div class="form-half">
+                <label>Teléfono</label>
+                <input type="tel" class="" name="phone" id="phone" placeholder="" minlength="10" maxlength="16"  pattern="^\+?[1-9]\d{0,2} ?\d{6,12}$">
+              </div>
+              <div class="form-full">
+                <label>Email<span class="required">*</span></label>
+                <input type="email" class="" name="mail" id="mail" placeholder="" required>
+              </div>
+              <div class="form-full">
+                <label>Mensaje<span class="required">*</span></label>
+                <textarea class="" rows="5" name="message" id="message" placeholder="" required></textarea>
+              </div>
+              <div class="form-full">
+                <br>
+                <button id="enviar" class="" type="button" disabled>ENVIAR</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / CONTACTO -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - NOTICIAS -->
+    <section id="noticias">
+      <div class="container noticias-container">
+        <h2>ANUNCIOS</h2>
+
+        <div class="news-carousel">
+
+          <!-- Flecha izquierda -->
+          <div>
+            <button type="button" class="btn-noticias" id="btn-n-left" disabled>
+              <img src="./assets/img/icons/right-arrow.svg" class="news-img" alt="left arrow">
+            </button>
+          </div>
+
+          <!-- Slides container -->
+          <div class="swiper contact-content">
+
+            <!-- Slides wrapper -->
+            <div class="feed swiper-wrapper">
+
+              <article class="swiper-slide">
+                <img src="./assets/img/dummy/16-9.jpg" alt="Foto noticia" class="foto-noticia">
+                <p class="title">Interdum et malesuada fames ac ante ipsum primis in faucibusInterdum.</p>
+              </article>
+
+              <article class="swiper-slide">
+                <img src="./assets/img/dummy/16-9.jpg" alt="Foto noticia" class="foto-noticia">
+                <p class="title">Interdum et malesuada fames ac ante ipsum primis in faucibusInterdum.</p>
+              </article>
+
+              <article class="swiper-slide">
+                <img src="./assets/img/dummy/16-9.jpg" alt="Foto noticia" class="foto-noticia">
+                <p class="title">Interdum et malesuada fames ac ante ipsum primis in faucibusInterdum.</p>
+              </article>
+
+              <article class="swiper-slide">
+                <img src="./assets/img/dummy/16-9.jpg" alt="Foto noticia" class="foto-noticia">
+                <p class="title">Interdum et malesuada fames ac ante ipsum primis in faucibusInterdum.</p>
+              </article>
+
+              <article class="swiper-slide">
+                <img src="./assets/img/dummy/16-9.jpg" alt="Foto noticia" class="foto-noticia">
+                <p class="title">Interdum et malesuada fames ac ante ipsum primis in faucibusInterdum.</p>
+              </article>
+
+            </div>
+
+          </div>
+
+          <!-- Flecha derecha -->
+          <div>
+            <button type="button" class="btn-noticias" id="btn-n-right">
+              <img src="./assets/img/icons/right-arrow.svg" alt="right arrow">
+            </button>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / NOTICIAS -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - MARCAS -->
+    <section id="marcas">
+      <div class="container marcas-container">
+        <!-- <h2>MARCAS</h2> -->
+
+        <div class="marcas-content mb-5">
+          <img src="./assets/img/logos/hdc.svg" alt="Home Design Čestlice">
+          <img src="./assets/img/logos/dahan_inmobiliaria.svg" alt="Dahan Inmobiliaria">
+          <img src="./assets/img/logos/be_tulum.svg" alt="Be Tulum">
+          <img src="./assets/img/logos/sabia_condos.svg" alt="Sabia Condos">
+          <img src="./assets/img/logos/naomi.svg" alt="Naomi">
+          <img src="./assets/img/logos/emma_y_elissa.svg" alt="Emma Y Elissa">
+          <img src="./assets/img/logos/riva_del_sol.png" alt="Riva Del Sol">
+          <img src="./assets/img/logos/nature.png" alt="Nature">
+          <img src="./assets/img/logos/batucada.png" alt="Batucada">
+        </div>
+        <div class="marcas-content">
+          <img src="./assets/img/logos/torah.png" alt="Torah">
+          <img src="./assets/img/logos/thay.png" alt="Thay">
+          <img src="./assets/img/logos/baykan.png" alt="Baykan">
+          <img src="./assets/img/logos/madaga.png" alt="Madaga">
+          <img src="./assets/img/logos/libelula.png" alt="Libélula">
+          <img src="./assets/img/logos/marrakec.png" alt="Marrakec">
+          <img src="./assets/img/logos/bali.png" alt="Bali">
+          <img src="./assets/img/logos/chinello.png" alt="Chinello">
+        </div>
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / MARCAS -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - FOOTER -->
+    <footer>
+      <div class="container footer-container">
+        <img class="footer-logo" src="./assets/img/dahan_capital-logo-w.svg" alt="Dagan Capital logo">
+        <p class="lead">Real Estate and Capital Investment</p>
+        <p class="cities">CZECH REPUBLIC <span>•</span> ITALY <span>•</span> MEXICO <span>•</span> USA <span>•</span>
+          ISRAEL <span>•</span> UAE </p>
+        <ul class="social-btns">
+          <li><img src="./assets/img/logos/facebook.svg" alt="Facebook"></li>
+          <li><img src="./assets/img/logos/x.svg" alt="X"></li>
+          <li><img src="./assets/img/logos/instagram.svg" alt="Instagram"></li>
+          <li><img src="./assets/img/logos/linkedin.svg" alt="LinkedIn"></li>
+          <li><img src="./assets/img/logos/youtube.svg" alt="YouTube"></li>
+        </ul>
+        <p class="copy">© 2025 Dahan Capital. Reservados todos los derechos.</p>
+      </div>
+    </footer>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / FOOTER -->
+
+  </main>
+
+
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - DIALOG -->
+  <dialog id="dialogInfo">
+
+    <h2>Trabajando en css optimizado para 1366 x 768 px screen (pendiente responsive)</h2>
+    <div class="colors-box">
+      <div>
+        <p style="font-size: 22px; font-weight:100 ">Montserrat 100 <i>Italic</i></p>
+        <p style="font-size: 22px; font-weight:200 ">Montserrat 200 <i>Italic</i></p>
+        <p style="font-size: 22px; font-weight:300 ">Montserrat 300 <i>Italic</i></p>
+        <p style="font-size: 22px; font-weight:400 ">Montserrat 400 <i>Italic</i></p>
+        <p style="font-size: 22px; font-weight:500 ">Montserrat 500 <i>Italic</i></p>
+        <p style="font-size: 22px; font-weight:600 ">Montserrat 600 <i>Italic</i></p>
+        <p style="font-size: 22px; font-weight:700 ">Montserrat 700 <i>Italic</i></p>
+        <p style="font-size: 22px; font-weight:800 ">Montserrat 800 <i>Italic</i></p>
+        <p style="font-size: 22px; font-weight:900 ">Montserrat 900 <i>Italic</i></p>
+      </div>
+      <div style="font-family: monospace">
+        <div style="color:#ccc;background: #000;; border: 1px solid #000;">
+          Black
+        </div>
+        <div style="color:#666;background: #fff; border: 1px solid #666;">
+          White
+        </div>
+
+        <div class="cb"></div>
+        <div style="color: #ddd; background: #111;">
+          <p>--cg-k<br>RGB: 26, 26, 26<br>HEX: #1a1a1a</p>
+        </div>
+        <div style="color: #ddd; background: #231f20;">
+          <p>--cg-k1<br>RGB: 35,31,32<br>HEX: #231f20</p>
+        </div>
+        <div style="color: #fff; background: #808080;">
+          <p>--cg<br>RGB: 128,128,128<br>HEX: #808080</p>
+        </div>
+        <div style="color: #333; background: #e6e6e6;">
+          <p>--cg-l1<br>RGB: 230,230,230<br>HEX: #e6e6e6</p>
+        </div>
+        <div style="color: #333; background: #f6f6f6;">
+          <p>--cg-l<br>RGB: 246,246,246<br>HEX: #f6f6f6</p>
+        </div>
+
+        <div class="cb"></div>
+        <div style="color: #ddd; background: #061c21;">
+          <p>--cd1-k<br>RGB: 6,28,33<br>HEX: #071d22</p>
+        </div>
+        <div style="color: #eee; background: #0b2c35;">
+          <p>--cd1-2<br>RGB: 10,44,53<br>HEX: #0b2c35</p>
+        </div>
+        <div style="color: #eee; background: #2a546d;">
+          <p>--cd1-1<br>RGB: 42,84,109<br>HEX: #2a546d</p>
+        </div>
+        <div style="color: #f6f6f6; background: #3e6c78;">
+          <p>--cd1<br>RGB: 62,108,120<br>HEX: #3e6c78</p>
+        </div>
+        <div style="color: #333; background: #b6ced4;">
+          <p>--cd1-l<br>RGB: 182,206,212<br>HEX: #b6ced4</p>
+        </div>
+
+        <div class="cb"></div>
+        <div style="color: #fff; background: #8d7d48;">
+          <p>--cd2<br>RGB: 141,125,72<br>HEX: #8d7d48</p>
+        </div>
+        <div style="color: #fff; background: #997c39;">
+          <p>--cd2-1<br>RGB: 153,124,57<br>HEX: #997c39</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cb"></div>
+    <script>
+      let pxS = 9;
+      document.write('<h3 style="color: #29c">' + pxS + 'px = ' + (pxS / 16) + 'rem</h3>')
+    </script>
+    <p class="p-layout"><span>header</span>#header<br><span>section</span>#banner / <span>section</span>#slogan /
+      <span>section</span>#nosotros / <span>section</span>#sectores / <span>section</span>#soluciones /
+      <span>section</span>#vision / <span>section</span>#presencia / <span>section</span>#contacto /
+      <span>section</span>#noticias /
+      <span>section</span>#marcas<br>footer<br><span>dialog</span>#dialogInfo<br><span>div</span>#loader
+    </p>
+
+    <div class="cb"></div>
+    <div class="tar">
+      <button onclick="closeDialog()">CLOSE</button>
+    </div>
+    <button class="btn-close-dialog" onclick="closeDialog()">&times;</button>
+  </dialog>
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / DIALOG -->
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - LOADER -->
+  <div id="loader">
+    <div>LOADING</div>
+  </div>
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - / LOADER -->
+
+  <!-- GSAP files -->
+  <script defer src="./assets/js/gsap/gsap.min.js"></script>
+  <script defer src="./assets/js/gsap/scroll-trigger.min.js"></script>
+
+  <!-- SWIPER files -->
+  <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/notiflix/notiflix-report-aio-3.2.8.min.js"></script>
+  <script src="assets/js/animations/our-vision.js"></script>
+  <script src="assets/js/swiper-config.js"></script>
+  
+  <script defer src="assets/js/script.js"></script>
+
+</body>
+
+</html>

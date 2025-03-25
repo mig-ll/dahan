@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/marcas.css">
   <link rel="stylesheet" href="assets/css/vision.css">
+  <link rel="stylesheet" href="assets/css/nosotros.css">
 
   <!-- <link rel="icon" href="assets/img/favicon.ico">
   <link rel="icon" href="assets/img/favicon-32.png" type="image/png">
@@ -126,8 +127,9 @@
       <div class="container nosotros-container">
         <h2 class="">NOSOTROS</h2>
         <div class="nosotros-content">
-          <img class="nosotros-logo" src="./assets/img/dahan_capital-logo-w.svg" alt="Dahan Capital logo">
-          <div>
+          <div class="nosotros__container">
+            <img class="nosotros-logo" src="./assets/img/dahan_capital-logo-w.svg" alt="Dahan Capital logo">
+            <div class="nosotros-texts">
             <p>En Dahan Capital, nos especializamos en inversiones innovadoras, despliegue de emprendimientos y
               financiamiento directo para desarrollos de proyectos de alto impacto.</p>
             <p>Nuestra experiencia abarca una amplia gama de sectores; desde la inversión en hoteles y bienes raíces
@@ -137,6 +139,10 @@
             <p>Con un enfoque preciso y una visión estratégica, impulsamos proyectos clave, ofreciendo soluciones
               estratégicas y financieras; generando valor a largo plazo y resultados excepcionales para nuestros
               inversionistas y socios.</p>
+            </div>
+          </div>
+          <div class="nosotros__image">
+            <img src="./assets/img/soluciones/soluciones-1.jpg" alt="">
           </div>
         </div>
       </div>
@@ -361,9 +367,9 @@
               impacto en diversos países y contribuyendo al crecimiento y consolidación de negocios clave en cada
               sector.
             </p>
-          </div>
+          </div> -->
           
-          <div class="txt-blk">
+          <!-- <div class="txt-blk">
             <p>Nuestra capacidad para identificar oportunidades únicas y gestionar fondos privados con visión
               estratégica
               nos ha permitido obtener resultados sobresalientes, respaldados por una ética de trabajo incansable y un
@@ -390,13 +396,15 @@
     <img class="bg-image img-2" src="./assets/img/vision/vision-bg-semi-color.jpg" alt="Vista de sketch semi coloreado">
     <img class="bg-image img-3" src="./assets/img/vision/vision-bg-color.jpg" alt="Vista de sketch coloreado">
     
+    <h2 class="vision__title">Nuestra visión</h2>
+
     <!-- Textos -->
     <div class="vision-texts__container">
       <div class="vision-text__container">
         <div class="vision-text-1">
-          <p>
+          <h3>
             Dahan Capital es más que una firma de inversiones.
-          </p>
+          </h3>
           <p>
             Somos un motor de cambio y crecimiento que impulsa la innovación y el progreso, respaldado por
             un equipo de expertos
@@ -406,15 +414,15 @@
       </div>
       <div class="vision-text__container">
         <div class="vision-text-2">
-          <p>
+          <h4>
             En Dahan Capital somos líderes en la gestión de inversiones de capital directo y real estate,
             con un
             enfoque en generar resultados excepcionales mediante decisiones inteligentes y estratégicas.
-          </p>
+          </h4>
           <p>
-            A lo largo de los años, hemos demostrado un sólido historial de éxito, invirtiendo en proyectos
-            de alto impacto en
-            diversos países y contribuyendo al crecimiento y consolidación de negocios clave en cada vision.
+            A lo largo de los años, hemos demostrado un sólido historial de éxito, invirtiendo en proyectos 
+            de alto impacto en diversos países y contribuyendo al crecimiento y consolidación de negocios 
+            clave en cada sector.
           </p>
         </div>
       </div>
@@ -422,17 +430,13 @@
         <div class="vision-text-3">
           <p>
             Nuestra capacidad para identificar oportunidades únicas y gestionar fondos privados con visión
-            estratégica nos ha
-            permitido obtener resultados sobresalientes, respaldados por una ética de trabajo incansable y
-            un enfoque centrado en
-            la excelencia.
+            estratégica nos ha permitido obtener resultados sobresalientes, respaldados por una ética de 
+            trabajo incansable y un enfoque centrado en la excelencia.
           </p>
           <p>
             Estamos comprometidos con la creación de valor a largo plazo para nuestros inversores y socios,
-            fomentando el
-            desarrollo de proyectos inmobiliarios y comerciales de vanguardia; así como financiando la
-            construcción de complejos
-            residenciales y condominios que definen el futuro del real estate.
+            fomentando el desarrollo de proyectos inmobiliarios y comerciales de vanguardia; así como financiando la
+            construcción de complejos residenciales y condominios que definen el futuro del real estate.
           </p>
         </div>
       </div>
@@ -440,7 +444,9 @@
     
     <!-- Logo -->
     <div class="vision-logo__container">
-      <img src="./assets/img/dahan_capital-logo-w.svg" alt="Dahan logo" class="vision-logo-dahan">
+      <div class="vision-logo__wrapper">
+        <img src="./assets/img/dahan_capital-logo-w.svg" alt="Dahan logo" class="vision-logo-dahan">
+      </div>
     </div>
     
 </section>
@@ -740,7 +746,10 @@
   <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
 
   <script src="assets/js/notiflix/notiflix-report-aio-3.2.8.min.js"></script>
-  <script src="assets/js/animations/our-vision.js"></script>
+  
+  <script type="module" src="./assets/js/animations/index.js"></script>
+  <!-- <script src="assets/js/animations/our-vision.js"></script>
+  <script src="assets/js/animations/nosotros.js"></script> -->
   <script src="assets/js/swiper-config.js"></script>
   
   <script defer src="assets/js/script.js"></script>

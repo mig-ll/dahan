@@ -819,6 +819,11 @@ section#contacto {
   background: var(--cd1) url(../img/contact/contact-bg.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
+  
+  @include tablet() {
+    position: relative;
+
+  }
 
   .container.contacto-container {
     padding: 0 0.625rem;

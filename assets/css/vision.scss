@@ -1,10 +1,23 @@
+@mixin tablet {
+    @media screen and (max-width: 720px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 520px) {
+        @content
+    }
+}
+
+
 #wrapper-vision {
-    padding: 0 !important;
+    // padding: 94px 0 0 0 !important;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-
+    
     /* Imágenes de fondo */
     .bg-image {
         width: 100%;
@@ -12,6 +25,7 @@
         position: absolute;
         inset: 0;
         object-fit: cover;
+        opacity: 0.75;
     }
 
     .img-2,
@@ -19,18 +33,78 @@
         opacity: 0;
     }
 
+    /* Titulo */
+    .vision__title {
+        color: var(--cd1-1);
+        text-transform: uppercase;
+    }
 
     /* Textos */
     .vision-texts__container {
+
+        /* Centrar textos en el container */
+        display: flex;
+        align-items: center;
+
         position: relative;
-        margin-top: 80px;
+        background: transparent url(../img/radial-bg-w.svg) center;
+        background-size: cover;
+        margin-top: 60px;
         width: 95%;
         max-width: 1200px;
         min-height: 200px;
         margin-inline: auto;
         padding: 20px 40px;
 
+        @include tablet() {
+            min-height: auto;
+        }
+
+
         .vision-text__container {
+
+            .vision-text-1 {
+
+                h3 {
+                    color: var(--cd1-1);
+                    font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+                    font-weight: 600;
+
+                    /* Aplicamos un width porcentual en base al transform scaleX */
+                    width: 75%;
+                    transform: scaleX(1.25);
+                    transform-origin: 0 0;
+                    margin-bottom: 1.875rem;
+                }
+            }
+
+            .vision-text-2 {
+                h4 {
+                    color: var(--cd1-1);
+                    font-size: clamp(1.0rem, 2.5vw, 1.375rem);
+                    font-weight: 600;
+                    letter-spacing: 0.015ch;
+                    line-height: 1.5;
+                    text-align: justify;
+                    margin-bottom: 1.875rem;
+                }
+            }
+
+
+            .vision-text-1 p,
+            .vision-text-2 p,
+            .vision-text-3 p {
+                color: var(--cd1-1);
+                text-align: justify;
+                font-size: clamp(14px, 2.5vw, 16px);
+                font-weight: 600;
+                line-height: clamp(20px, 2.5vw, 22px);
+            }
+
+            .vision-text-3 p:first-of-type {
+                margin-bottom: 1.875rem;
+
+            }
 
             /* .vision-text-1, */
             .vision-text-2,
@@ -44,16 +118,31 @@
 
     /* Logo */
     .vision-logo__container {
+        --image-height: 200px;
         position: relative;
         width: 100%;
-        height: 300px;
+        height: var(--image-height);
+        padding: 0 83px;
 
-        .vision-logo-dahan {
-            position: absolute;
-            right: 0;
-            height: 300px;
-            aspect-ratio: 1;
-            object-fit: contain;
+        @include tablet() {
+            --image-height: 120px;
+        }
+
+        .vision-logo__wrapper {
+            position: relative;
+
+            .vision-logo-dahan {
+                position: absolute;
+                right: 0;
+                height: var(--image-height);
+                aspect-ratio: 1;
+                object-fit: contain;
+
+                @include tablet() {
+                    right: 50%;
+                    translate: 50% 0;
+                }
+            }
         }
 
     }

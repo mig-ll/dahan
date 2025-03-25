@@ -771,6 +771,11 @@ section#contacto {
   background-size: cover;
   background-attachment: fixed;
 }
+@media screen and (max-width: 720px) {
+  section#contacto {
+    position: relative;
+  }
+}
 section#contacto .container.contacto-container {
   padding: 0 0.625rem;
   height: calc(100vh - 7.5rem);

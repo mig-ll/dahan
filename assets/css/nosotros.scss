@@ -1,0 +1,70 @@
+@mixin tablet {
+    @media screen and (max-width: 720px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 520px) {
+        @content
+    }
+}
+
+.nosotros-container {
+    .nosotros-content {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet() {
+            flex-direction: column !important;
+        }
+
+        .nosotros__container {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .nosotros-logo {
+                height: 160px;
+                aspect-ratio: 1;
+                object-fit: contain;
+            }
+
+            .nosotros-texts {
+                position: relative;
+
+                @include tablet() {
+                    p:first-of-type {
+                        opacity: 1;
+                    }
+
+                    p:not(:first-of-type) {
+                        position: absolute;
+                        top: 0;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+
+        .nosotros__image {
+            flex: 1;
+            max-width: 350px;
+            
+            @include tablet() {
+                height: 0;
+            }
+            img {
+                opacity: 0;
+                transform: translateY(40px);
+
+            }
+        }
+    }
+
+}

@@ -87,6 +87,8 @@
   </div>
 
   <button onclick="leerTexto()" style="margin-top: 10px;">Escuchar pronunciación</button>
+  
+  <button onclick="leerTextoUK()" style="margin-top: 10px;">Escuchar pronunciación</button>
 
   <script>
     const words = ["sword","helmet","crown","necklace","belt","bracelet","shield","knight","queen","timeline","midnight","sunscreen","storyteller","terrified","exhibit","century","castle","mountain","forest","town","field","lake","island","river","path","waiter","careful","rhino","awake","no problem","continent","satellite","outdoors","expensive","delicious","cheap","excellent","deep","top","scare","enormous","brave","fire","flood","police car","police officer","fire engine","firefighter","ambulance","paramedic","emergency","danger","extinguisher","donkey","strange","snow","ice","riverbank","land","wave","in pain","broken","competition","bandage","entrance","full","flashlight","east","empty","stairs","escalator","ticket office","platform","engineer","station","backpack","suitcase","spring","summer","fall","winter","o’clock","brain","date","road","bike","fuel","during","everywhere","dark","beard","curly","mustache","light","scar","blond","straight","criminal","mysterious","thumb","thin","bald","wavy","slim","skinny","athletic","curvy","handsome","cookie","creature","spacesuit","flashlight","unhappy","wonderful","untidy","wing","horn","back","scales","neck","tail","feathers","tongue","beak","myth","omnivores","Pegasus","mermaid","unicorn","phoenix","centaur","the sphinx","cellar","beautiful","dangerous","heavy","interesting","friendly","favorite","scary","trombone","triangle","keyboard","drums","tambourine","saxophone","trumpet","violin","harp","orchestra","guitar","drummer","band","harpist","conductor","baton","recorder","bow","deep","nervous","excited","sleepy","comet","star","rocket","planet","moon","telescope","astronaut","space station","planetarium","outer space","Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune"];
@@ -130,6 +132,13 @@
     function leerTextoAuto(palabra) {
       const utterance = new SpeechSynthesisUtterance(palabra);
       utterance.lang = "en-US";
+      speechSynthesis.speak(utterance);
+    }
+    
+    function leerTextoUK() {
+      if (!selectWord) return;
+      const utterance = new SpeechSynthesisUtterance(selectWord);
+      utterance.lang = "en-UK";
       speechSynthesis.speak(utterance);
     }
 

@@ -101,7 +101,7 @@
       segment.className = 'segment';
       segment.style.transform = `rotate(${i * segmentAngle}deg)`;
       segment.style.background = `hsl(${i * 360 / words.length}, 100%, 80%)`;
-      segment.innerText = word;
+      segment.innerText = ""; //word
       wheel.appendChild(segment);
     });
 

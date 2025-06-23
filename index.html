@@ -117,13 +117,19 @@
       setTimeout(() => {
         selectWord = words[randomIndex];
         result.textContent = `Palabra seleccionada: ${words[randomIndex]}`;
-        leerTexto();
+        leerTextoAuto(words[randomIndex]);
       }, 4000);
     }
 
     function leerTexto() {
       if (!selectWord) return;
       const utterance = new SpeechSynthesisUtterance(selectWord);
+      utterance.lang = "en-US";
+      speechSynthesis.speak(utterance);
+    }
+    
+    function leerTextoAuto(palabra) {
+      const utterance = new SpeechSynthesisUtterance(palabra);
       utterance.lang = "en-US";
       speechSynthesis.speak(utterance);
     }

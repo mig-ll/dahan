@@ -83,7 +83,9 @@
 
   <button onclick="spin()">Girar Ruleta</button>
   
-  <div id="result"></div>
+  <div>
+    <h1 id="result"></h1>
+  </div>
 
   <button onclick="leerTexto()" style="margin-top: 10px;">Escuchar pronunciación</button>
 
@@ -114,11 +116,9 @@
 
       wheel.style.transform = `rotate(${currentRotation}deg)`;
 
-      setTimeout(() => {
-        selectWord = words[randomIndex];
-        result.textContent = `Palabra seleccionada: ${words[randomIndex]}`;
-        leerTextoAuto(words[randomIndex]);
-      }, 4000);
+      selectWord = words[randomIndex];
+      result.textContent = `Palabra seleccionada: ${words[randomIndex]}`;
+      leerTextoAuto(words[randomIndex]);
     }
 
     function leerTexto() {
